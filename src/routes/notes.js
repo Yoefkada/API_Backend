@@ -1,5 +1,8 @@
 const express = require("express");
+const { PrismaClient } = require("@prisma/client");
 const { body, param, query, validationResult } = require("express-validator");
+
+const prisma = new PrismaClient(); // Instantiate Prisma
 const router = express.Router();
 
 // Create Note
